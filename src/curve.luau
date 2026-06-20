@@ -34,7 +34,7 @@ function Curve.new(...: Vector2): Curve
 		local t = (i - 1) / (SAMPLE_SIZE - 1)
 		curve[i] = calc_bezier_point(t, ...)
 
-    if i < 2 then continue end
+    	if i < 2 then continue end
 		if curve[i].x <= curve[i-1].x then
 			increasing = false
 		end
