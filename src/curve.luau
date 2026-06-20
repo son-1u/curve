@@ -60,7 +60,7 @@ function Curve.sample(self: Curve, x: number): number
 	return self:sample_parametric(x)
 end
 
--- @t: value between [0, 1] representing a time in the curve. Calculate using point/max_point
+-- @t: value between [0, 1] representing a time in the curve. t is a percentage of how far into the graph you want to sample
 function Curve.sample_parametric(self: Curve, t: number): number
 	t = math.clamp(t, 0, 1)
 	
